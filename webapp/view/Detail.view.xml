@@ -1,0 +1,41 @@
+<mvc:View
+	height="100%"
+	controllerName="Zmaterial.controller.Detail"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m">
+	<Page
+		id="page"
+		showHeader="true" title="Product Detail"
+		showNavButton="false"
+		navButtonPress="onNavBack" class="sapUiResponsiveContentPadding">
+		<customHeader>
+			<Toolbar>
+				<!--<Button type="Back" press="onPress" />-->
+				<ToolbarSpacer/>
+				<Title text="Product Detail" level="H1"/>
+				<ToolbarSpacer/>
+				<!--<Button icon="sap-icon://edit" type="Transparent" press="onPress" ariaLabelledBy="editButtonLabel"/>-->
+				<Button id="edit" text="Edit" enabled="true" press="handleEditPress" />
+				<Button id="save" text="Save" type="Emphasized" visible="false" press="save" />
+				<Button id="cancel" text="Cancel" visible="false" press="onNavBack" />
+			</Toolbar>
+		</customHeader>
+		<!--<subHeader>-->
+		<!--	<Toolbar>-->
+		<!--		<ToolbarSpacer/>-->
+		<!--		<Button text="Default" press="onPress" />-->
+		<!--		<Button type="Reject" text="Reject" press="onPress" />-->
+		<!--		<Button icon="sap-icon://action" type="Transparent" press="onPress" ariaLabelledBy="actionButtonLabel"/>-->
+		<!--	</Toolbar>-->
+		<!--</subHeader>-->
+		<!--<customHeader>-->
+		<!--	<Bar>-->
+		<!--		<contentRight>-->
+		<!--			<Button id="edit" text="Edit" enabled="true" press="handleEditPress" />-->
+		<!--			<Button id="save" text="Save" type="Emphasized" visible="false" press="handleSavePress" />-->
+		<!--			<Button id="cancel" text="Cancel" visible="false" press="handleCancelPress" />-->
+		<!--		</contentRight>-->
+		<!--	</Bar>-->
+		<!--</customHeader>-->
+	</Page>
+</mvc:View>

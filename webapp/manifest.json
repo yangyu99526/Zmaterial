@@ -1,0 +1,130 @@
+{
+	"_version": "1.7.0",
+	"sap.app": {
+		"id": "Zmaterial",
+		"type": "application",
+		"i18n": "i18n/i18n.properties",
+		"title": "{{appTitle}}",
+		"description": "{{appTitle}}",
+		"applicationVersion": {
+			"version": "1.0.0"
+		},
+		"ach": "AAA-BBB-CCC",
+		"sourceTemplate": {
+			"id": "servicecatalog.connectivityComponent",
+			"version": "0.0.0"
+		},
+		"dataSources": {
+			"zmaterial_srv": {
+				"uri": "/sap/opu/odata/sap/ZMATERIAL_SRV/",
+				"type": "OData",
+				"settings": {
+					"odataVersion": "2.0",
+					"localUri": "localService/metadata.xml"
+				}
+			}
+		}
+	},
+	"sap.ui": {
+		"technology": "UI5",
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		}
+	},
+	"sap.ui5": {
+		"rootView": {
+			"viewName": "Zmaterial.view.App",
+			"type": "XML",
+			"id": "app"
+		},
+		"dependencies": {
+			"minUI5Version": "1.93",
+			"libs": {
+				"sap.ui.core": {},
+				"sap.m": {}
+			}
+		},
+		"contentDensities": {
+			"compact": true,
+			"cozy": true
+		},
+		"models": {
+			"i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"settings": {
+					"bundleName": "Zmaterial.i18n.i18n",
+					"supportedLocales": [
+						""
+					],
+					"fallbackLocale": ""
+				}
+			},
+			"zmaterial_srv": {
+				"type": "sap.ui.model.odata.v2.ODataModel",
+				"settings": {
+					"defaultOperationMode": "Server",
+					"defaultBindingMode": "TwoWay",
+					"defaultCountMode": "Request"
+				},
+				"dataSource": "zmaterial_srv",
+				"preload": true
+			},
+			"help": {
+				"type": "sap.ui.model.json.JSONModel",
+				"uri": "Help.json"
+			}
+		},
+		"resources": {
+			"css": [
+				{
+					"uri": "css/style.css"
+				}
+			]
+		},
+		"routing": {
+			"config": {
+				"routerClass": "sap.m.routing.Router",
+				"viewType": "XML",
+				"viewPath": "Zmaterial.view",
+				"controlId": "app",
+				"controlAggregation": "pages",
+				"transition": "slide"
+			},
+			"routes": [
+				{
+					"pattern": "",
+					"name": "apphome",
+					"target": "apphome"
+				},
+				{
+					"pattern": "create",
+					"name": "create",
+					"target": "detail"
+				},
+				{
+					"pattern": "detail/{material}",
+					"name": "detail",
+					"target": "detail"
+				}
+			],
+			"targets": {
+				"apphome": {
+					"viewName": "App",
+					"viewId": "apphome",
+					"viewLevel": 1
+				},
+				"detail": {
+					"viewName": "Detail",
+					"viewId": "detail",
+					"viewLevel": 2
+				}
+			}
+		}
+	},
+	"sap.platform.abap": {
+		"uri": "/sap/bc/ui5_ui5/sap/zmaterial/webapp",
+		"_version": "1.1.0"
+	}
+}

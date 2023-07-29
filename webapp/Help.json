@@ -1,0 +1,83 @@
+{
+	"Mtart": [
+	{ 
+	  "key":"ERSA",
+	  "dec": "Spare Parts"
+	},
+	{
+	  "key":"ABF",
+	  "dec": "Waste"
+	},
+	{
+	  "key":"BUND",
+	  "dec": "Bundle Product"
+	},
+	{
+	  "key":"CH00",
+	  "dec": "CH Contract Handling"
+	},
+	{
+	  "key":"COUP",
+	  "dec": "Coupons"
+	},
+	{
+	  "key":"DIEN",
+	  "dec": "Service"
+	}
+  ],
+  "Mbrsh": [
+	{
+	  "key":"1",
+	  "dec": "Retail"
+	},
+	{
+	  "key":"A",
+	  "dec": "Plant engin./construction"
+	},
+	{
+	  "key":"C",
+	  "dec": "Chemical industry"
+	},
+	{
+	  "key":"M",
+	  "dec": "Mechanical engineering"
+	},
+	{
+	  "key":"P",
+	  "dec": "Pharmaceuticals"
+	}
+  ]
+  ,
+  "Maktl": [
+	{
+	  "key":"01",
+	  "dec": "Material group 1"
+	},
+	{
+	  "key":"02",
+	  "dec": "Material group 2"
+	}
+  ],
+  "Meins": [
+	{
+	  "key":"CS",
+	  "dec": "CV"
+	},
+	{
+	  "key":"DZ",
+	  "dec": "DZ"
+	},
+	{
+	  "key":"G",
+	  "dec": "G"
+	},
+	{
+	  "key":"KA",
+	  "dec": "KA"
+	},
+	{
+	  "key":"L",
+	  "dec": "L"
+	}
+  ]
+}

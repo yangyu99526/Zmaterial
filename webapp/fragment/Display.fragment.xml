@@ -1,0 +1,42 @@
+<core:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:l="sap.ui.layout"
+	xmlns:f="sap.ui.layout.form"
+	xmlns:core="sap.ui.core">
+	<VBox class="sapUiSmallMargin">
+		<f:SimpleForm id="SimpleFormDisplay354wideDual"
+			editable="false"
+			layout="ResponsiveGridLayout"
+			title="Material Infomation"
+			labelSpanXL="4"
+			labelSpanL="3"
+			labelSpanM="4"
+			labelSpanS="12"
+			adjustLabelSpan="false"
+			emptySpanXL="0"
+			emptySpanL="4"
+			emptySpanM="0"
+			emptySpanS="0"
+			columnsXL="2"
+			columnsL="2"
+			columnsM="1"
+			singleContainerFullSize="false" >
+			<f:content>
+				<core:Title text="General Data" />
+				<Label text="Material" />
+				<Text text="{materObj>/Matnr}" />
+				<Label text="Description" />
+				<Text text="{materObj>/Maktx}" />
+				<Label text="Industry Sector" />
+				<Text text="{materObj>/Mbrsh}" />
+				<core:Title text="" />
+				<Label text="Material Type" />
+				<Text text="{materObj>/Mtart}" />
+				<Label text="Material Group" />
+				<Text text="{materObj>/Matkl}" />
+				<Label text="Base Uom" />
+				<Text text="{materObj>/Meins}" />
+			</f:content>
+		</f:SimpleForm>
+	</VBox>
+</core:FragmentDefinition>

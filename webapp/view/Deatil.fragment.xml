@@ -1,0 +1,44 @@
+<core:FragmentDefinition xmlns:m="sap.m" xmlns:core="sap.ui.core" xmlns="sap.uxap" xmlns:layout="sap.ui.layout" 
+   xmlns:f="sap.ui.layout.form" >
+	<m:Dialog id="FrgDetail" title="{i18n>Derail}">
+		<f:SimpleForm id="SimpleForm" editable="true" layout="ResponsiveGridLayout" labelSpanXL="6" labelSpanL="6" labelSpanM="6" labelSpanS="6"
+			adjustLabelSpan="true" emptySpanXL="0" emptySpanL="0" emptySpanM="0" emptySpanS="0" columnsXL="2" columnsL="2" columnsM="2"
+			singleContainerFullSize="false">
+			<f:content>
+				<core:Title text=""/>
+				<m:Label text="{i18n>MaterialId}" labelFor="MaterialId" />
+				<m:Input id="MaterialId" required="true" editable="false"/>
+				
+				<m:Label text="{i18n>IndSector}" labelFor="IndSector"/>
+				<m:ComboBox id="IndSector" showSecondaryValues="true" required="true" items="{ path: 'help>/Mbrsh'}">
+					<core:ListItem key="{help>key}" text="{help>dec}" additionalText="{help>key}"/>
+				</m:ComboBox>
+				
+				<m:Label text="{i18n>MatlType}" labelFor="MatlType"/>
+				<m:ComboBox id="MatlType" showSecondaryValues="true" required="true" items="{ path: 'help>/Mtart'}">
+					<core:ListItem key="{help>key}" text="{help>dec}" additionalText="{help>key}"/>
+				</m:ComboBox>
+				
+				<core:Title text=""/>
+				<m:Label text="{i18n>MaterialDec}" labelFor="MaterialDec" />
+				<m:Input id="MaterialDec" required="true"/>
+				
+				<m:Label text="{i18n>MatlGroup}" labelFor="MatlGroup"/>
+				<m:ComboBox id="MatlGroup" showSecondaryValues="true" required="true" items="{ path: 'help>/Maktl'}">
+					<core:ListItem key="{help>key}" text="{help>dec}" additionalText="{help>key}"/>
+				</m:ComboBox>
+				
+				<m:Label text="{i18n>BaseUom}" labelFor="BaseUom"/>
+				<m:ComboBox id="BaseUom" showSecondaryValues="true" required="true" items="{ path: 'help>/Meins'}">
+					<core:ListItem key="{help>key}" text="{help>dec}" additionalText="{help>key}"/>
+				</m:ComboBox>
+			</f:content>
+		</f:SimpleForm>
+		<m:beginButton>
+			<m:Button id="okSave" text="Save" press=".okSave" type="Accept" />
+		</m:beginButton>
+		<m:endButton>
+			<m:Button id= "Close" text="Cancel" press=".onClose" type="Reject" />
+		</m:endButton>
+	</m:Dialog>
+</core:FragmentDefinition>

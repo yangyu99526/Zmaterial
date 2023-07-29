@@ -1,0 +1,6 @@
+{
+  "deploy": {
+    "destination": "F4D",
+    "name": "ZMATERIAL"
+  }
+}
